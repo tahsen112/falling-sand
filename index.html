@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sketch</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="libraries/p5.min.js"></script>
+  <!-- <script src="libraries/p5.sound.min.js"></script> -->
+</head>
+
+<body>
+  <div class="tut" onclick="hideTut()">
+    <div class="hand"><i class="fa-solid fa-hand-pointer"></i></div>
+    <p>try to drop some sand!</p>
+  </div>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <h3>T-SandBox</h3>
+
+      </div>
+      <div class="info">
+        <div class="navBar" onclick="showNav()">
+          <i class="fa-solid fa-bars"></i>
+          <div class="navText">
+            <p class="infoPar">made for coding challenge</p>
+          </div>
+        </div>
+        <p class="reqPar">made for coding challenge</p>
+
+      </div>
+    </header>
+
+    <footer>
+      <div class="sizes">
+
+        <div class="sandSizes">
+          <label for="sandSize"><i class="fa-solid fa-expand"></i>
+            <p>sand size :</p>
+          </label>
+          <select id="sandSize" class="size" onclick="changSandSize(this.value)">
+            <option value="10">10px</option>
+            <option value="5" selected>5px</option>
+            <option value="3">3px</option>
+          </select>
+        </div>
+
+        <div class="matrixSizes">
+          <label for="matrixSize"><i class="fa-solid fa-expand"></i>
+            <p class="matrixPar">matrix size :</p>
+          </label>
+          <select id="matrixSize" class="size" onclick="changMatrixSize(this.value)">
+            <option value="25">25</option>
+            <option value="15" selected>15</option>
+            <option value="10">10</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="colors">
+        <div class="color1 c" onclick="changColor()">
+          <div class="circle"></div>
+        </div>
+        <div class="color2 c" onclick="getColor(360)"></div>
+        <div class="color3 c" onclick="getColor(330)"></div>
+        <div class="color4 c" onclick="getColor(300)"></div>
+        <div class="color5 c" onclick="getColor(315)"></div>
+        <div class="color6 c" onclick="getColor(29)"></div>
+        <div class="color7 c" onclick="getColor(56)"></div>
+        <div class="color8 c" onclick="getColor(270)"></div>
+        <div class="color9 c" onclick="getColor(290)"></div>
+        <div class="color10 c" onclick="getColor(194)"></div>
+      </div>
+      <div class="rest" onclick="rest()"><i class="fa-solid fa-arrows-rotate"></i>rest</div>
+
+    </footer>
+
+    <script src="sketch.js"></script>
+
+  </div>
+
+</body>
+
+</html>
